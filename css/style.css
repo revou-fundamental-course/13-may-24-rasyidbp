@@ -1,0 +1,279 @@
+
+/* buat biji dibelakang */
+#blob { 
+    background-color: aliceblue;
+    height: 500px;
+    aspect-ratio: 1;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(
+        to right,
+        #A5D7E8,
+        #576CBC
+    );
+    animation: rotate 20s infinite;
+    filter:blur(200px);
+    overflow-x: hidden;
+}
+
+@keyframes rotate{
+    from{
+        rotate: 0deg;
+    }
+    50%{
+        scale: 1 1.5;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #000000;
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #F1F6F9;
+}
+
+.hidden {
+    display: none;
+}
+
+.center{
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.🛫 {
+    color: #576CBC;
+}
+
+
+
+.radio-group {
+    /* Style your radio buttons here */
+}
+
+#div1, #div2 {
+    display: none;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 20%;
+    padding-top: 5%;
+}
+
+.logo {
+    height: 30px;
+}
+
+.nav a{
+    background-color: rgba(31, 31, 31, 0.1); /* Green */
+    color: #F1F6F9;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 4px 15px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.nav a:hover{
+    color: #576CBC;
+    font-weight: bold;
+    transition: all 1 ease-in-out;
+}
+
+.container1 {
+    background-color: rgba(31, 31, 31, 0.8);
+    border-radius: 1%;
+    padding: 2%;
+    box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.judul {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.box1 {
+    display: flex;
+}
+
+.🦕 {
+    width: 100%;
+    background-color: #101010;
+    border-radius: 2%;
+    padding: 10px;
+    box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.🎶 {
+    background-color: rgba(31, 31, 31, 0.8);
+    border-radius: 5px;
+    padding: 2%;
+    box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.🎶 h2{
+    margin: 0px;
+}
+
+.gambir {
+    width: 60%;
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.🦕 input{
+    padding: 6px 12px;
+    background: rgb(31, 32, 35);
+    border: 1px solid rgb(60, 63, 68);
+    border-radius: 4px;
+    font-size: 13px;
+    color: #F1F6F9;
+    appearance: none;
+    transition: border 0.15s ease 0s;
+    width: 80%;
+}
+
+.validation input:hover {
+    /* Change border color on hover */
+    border-color: #576CBC;
+}
+
+.🦕 input:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: rgb(100, 153, 255);
+}
+
+.submit {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #576CBC;
+    border-color: #576CBC;
+}
+
+.submit:hover {
+    color: #F1F6F9;
+    background-color: #576CBC;
+    border-color: #576CBC;
+}
+
+input[type="radio"] {
+    display: none; /* Sembunyikan radio button default */
+}
+
+.nav {
+    margin-bottom: 1%;
+}
+
+.nav label {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 17px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #576CBC;
+    border-color: #576CBC;
+}
+.nav label:hover {
+    color: #F1F6F9;
+    background-color: #576CBC;
+    border-color: #576CBC;
+}
+  
+input[type="radio"]:checked + label {
+    color: #F1F6F9;
+    background-color: #576CBC;
+    border-color: #576CBC;
+}
+
+.clear {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: yellow;
+    border-color: yellow;
+}
+
+.clear:hover {
+    color: #F1F6F9;
+    background-color: yellow;
+    border-color: yellow;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #blob {
+        display: none;
+    }
+    .wrapper {
+        padding: 5%;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .🦕 {
+        width: 93%;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" onmousemove="coordinate(event)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokopedo'ia Printing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/kuceng.png">
+</head> 
+<body>
+    <div id="blob"></div>
+    <div class="wrapper">
+        <div class="container1" id="home">
+            <div class="item item1 center">
+                <header>
+                    <div><img class="logo" src="img/bijigoreng.png"></div>
+                    <div class="nav">
+                        <input type="radio" id="option1" name="radio" value="persegi" checked onclick="showPersegi()">
+                        <label for="option1">Persegi</label>
+                        
+                        <input type="radio" id="option2" name="radio" value="segitiga" onclick="showSegitiga()">
+                        <label for="option2">Segitiga</label>
+                    </div>
+                </header>
+                <hr>
+                <div class="judul">
+                    <h1>Dari Hitung Bangun Datar Seperti Persegi dan Segitiga Sampai Menghitung Jodoh Disini Tempatnya - <span class="🛫">Hitung Jodoh</span>.</h1>
+                    <p>Dilengkapi dengan antarmuka yang intuitif dan mudah digunakan, sehingga Anda dapat menyelesaikan perhitungan dengan cepat dan efisien.</p>
+                </div>
+            </div>
+            <div id="🐉">
+                <div class="box1">
+                    <div class="item 🦕">
+                        <div class="validation">
+                            <div class="🎶">
+                                <h2 class="center 🛫">Keliling Persegi</h2>
+                            </div>
+                            <img class="gambir" src="img/ayamkepleset.png">
+                            <p>Rumus Keliling Persegi Yaitu:</p>
+                            <h4 class="center">K = 4s</h4>
+                            <p>Di mana:
+                                <br>K adalah keliling persegi
+                                <br>s adalah panjang sisi persegi
+                            </p>
+                            <hr>
+                            <form>
+                                <p>
+                                    <label class="bold" for="name">Sisi:</label><br>
+                                    <input type="text" id="sisiKelP" name="name"><br>
+                                </p>
+                                <p id="hasilKelP"></p>
+                                <h1><button class="submit" type="button" onclick="kelP()">Submit</button>
+                                <button class="clear" type="button" onclick="clearKelP()">Clear</button></h1>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="box1">
+                    <div class="item 🦕">
+                        <div class="validation">
+                            <div class="🎶">
+                                <h2 class="center 🛫">Luas Persegi</h2>
+                            </div>
+                            <img class="gambir" src="img/ayamkepleset.png">
+                            <p>Rumus Luas Persegi Yaitu:</p>
+                            <h4 class="center">L = s x s</h4>
+                            <p>Di mana:
+                                <br>L adalah luas persegi
+                                <br>s adalah panjang sisi persegi
+                            </p>
+                            <hr>
+                            <form>
+                                <p>
+                                    <label class="bold" for="name">Sisi:</label><br>
+                                    <input type="text" id="sisiLuP" name="name"><br>
+                                </p>
+                                <p id="hasilLuP"></p>
+                                <h1>
+                                <button class="submit" type="button" onclick="luP()">Submit</button>
+                                <button class="clear" type="button" onclick="clearLuP()">Clear</button></h1>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="🐱‍🏍" style="display: none;">
+                <div class="box1">
+                    <div class="item 🦕">
+                        <div class="validation">
+                            <div class="🎶">
+                                <h2 class="center 🛫">Keliling Segitiga</h2>
+                            </div>
+                            <img class="gambir" src="img/babiguling.png">
+                            <p>Rumus Keliling Segitiga Yaitu:</p>
+                            <h4 class="center">K = a + b + c</h4>
+                            <p>Di mana:
+                                <br>K = Keliling segitiga
+                                <br>a, b, c = Panjang sisi-sisi segitiga
+                            </p>
+                            <hr>
+                            <form>
+                                <p>
+                                    <label class="bold" for="name">Sisi a:</label><br>
+                                    <input type="text" id="sisiKelSa" name="name"><br>
+                                </p>
+                                <p>
+                                    <label class="bold" for="name">Sisi b:</label><br>
+                                    <input type="text" id="sisiKelSb" name="name"><br>
+                                </p>
+                                <p>
+                                    <label class="bold" for="name">Sisi c:</label><br>
+                                    <input type="text" id="sisiKelSc" name="name"><br>
+                                </p>
+                                <p id="hasilKelS"></p>
+                                <h1><button class="submit" type="button" onclick="kelS()">Submit</button>
+                                <button class="clear" type="button" onclick="clearKelS()">Clear</button></h1>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="box1">
+                    <div class="item 🦕">
+                        <div class="validation">
+                            <div class="🎶">
+                                <h2 class="center 🛫">Luas Segitiga</h2>
+                            </div>
+                            <img class="gambir" src="img/babiguling.png">
+                            <p>Rumus Luas Segitiga Yaitu:</p>
+                            <h4 class="center">L = ½ x a x t</h4>
+                            <p>Di mana:
+                                <br>L = Luas segitiga
+                                <br>a = Panjang alas segitiga
+                                <br>t = Tinggi segitiga (jarak alas ke puncak segitiga)
+                            </p>
+                            <hr>
+                            <form>
+                                <p>
+                                    <label class="bold" for="name">Sisi:</label><br>
+                                    <input type="text" id="alasLuS" name="name"><br>
+                                </p>
+                                <p>
+                                    <label class="bold" for="name">Sisi:</label><br>
+                                    <input type="text" id="tinggiLuS" name="name"><br>
+                                </p>
+                                <p id="hasilLuS"></p>
+                                <h1>
+                                <button class="submit" type="button" onclick="luS()">Submit</button>
+                                <button class="clear" type="button" onclick="clearLuS()">Clear</button></h1>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
